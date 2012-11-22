@@ -2,7 +2,6 @@
     <body>
     	<script src="http://code.jquery.com/jquery-latest.js"></script>
     	<script src="quicksort.js"></script>
-    	<div id ="initItems"></div>
         <div id ="items">
         </div>
     </body>        

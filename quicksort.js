@@ -32,19 +32,24 @@ function quicksort(a, low, high){
     }
 }
 
-function addToHtml(a){
-var html = "<ul>";
+function addToHtml(a, target, heading){
+var html = "";
+if(heading){
+html +="<h3>" + heading + "</h3>"
+}
+html +="<ul>";
     for(var i =0;i<a.length;i++){
         html += "<li>" + a[i] + "</li>";
     }        
 html += "</ul>";
-document.getElementById('items').innerHTML = html;
+document.getElementById(target).innerHTML = html;
 
     
 }
 
 $(document).ready( function(){
 var a = [45,38,12,62,42,34,8,2,76,48];
+addToHtml(a, "initItems", "Array elements initially");
 quicksort(a, 0, a.length-1);    
-    addToHtml(a);
+addToHtml(a, "items", "Array items at the end");
 });
