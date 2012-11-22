@@ -17,9 +17,10 @@ var pivotElement = a[pivot];
             a[right] = temp;
         }
     }
-//this is tricky part. if right has moved to left of left, then this will be useful!
-	a[low] = a[right]
-	a[right] = pivotElement;    
+    if(a[pivot] > a[right]){
+	    var temp = a[pivot];
+	    a[pivot] = a[right];
+    }
     return right;    
 }
 
